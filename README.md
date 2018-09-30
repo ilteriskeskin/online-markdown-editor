@@ -8,7 +8,7 @@
 
 **Online markdown editör yapılması için yola çıkılmıştır.**
 
-**Geliştirme esnasında takip edilecek adımlar**
+**Geliştirme esnasında takip edilecek adımlar:**
 
 1-Kullanıcı kayıt ve giriş uygulamalarının yapımı.
 
