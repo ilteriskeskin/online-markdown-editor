@@ -11,5 +11,7 @@
 **Geliştirme esnasında takip edilecek adımlar**
 
 1-Kullanıcı kayıt ve giriş uygulamalarının yapımı.
+
 2-Kullanıcıların kendi markdown dosyalarını oluşturabilmesi.
+
 3-Canlı önizleme yapılması.
