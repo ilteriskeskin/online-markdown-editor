@@ -1,8 +1,12 @@
+
 {% extends "layout.html" %}
+
 
 {% block body %}
 
     <div class="jumbotron text-center">
+            {% csrf_token %}
+
             <h3>Online Markdown Editörüne Hoş Geldin {{ request.user.username }}</h3>
             <p>Proje Detayları Yakında Paylaşılacaktır.</p>
     </div>
