@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<form method = "post">
+{% csrf_token %}
+{{form}}
+
+    <br>
+<button type = "submit" class = "btn btn-danger">Dosya Oluştur</button>
+</form>
+
+
+{% endblock body %}
