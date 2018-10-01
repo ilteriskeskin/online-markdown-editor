@@ -45,6 +45,7 @@ def login(request):
         dj_login(request,user)
         return render(request,"index.html")
     return render(request,"login.html",context)
-    
+
 def logout(request):
-    pass
+        logout(request)
+        return render(request, "index.html")
