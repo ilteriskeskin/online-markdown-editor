@@ -12,12 +12,24 @@
           </ul>
 
           <ul class="navbar-nav ml-auto">
+            {% if request.user.is_authenticated %}
+
+           
             <li class="nav-item active">
-              <a class="nav-link" href="/user/register">Kayıt Ol</a>
-            </li>
+                <a class="nav-link" href="{% url 'user:logout' %}">Çıkış Yap</span></a></li> 
+  
+  
+            {% else %}
             <li class="nav-item active">
-              <a class="nav-link" href="/user/login">Giriş Yap</a>
-            </li>
+                <a class="nav-link" href="{% url 'user:login' %}">Giriş Yap</span></a></li>
+            <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'user:register' %}">Kayıt Ol</span></a></li>
+          
+  
+            {% endif %}
+            
+        
+         
           </ul>
         </div>
       </div>
