@@ -46,6 +46,6 @@ def login(request):
         return render(request,"index.html")
     return render(request,"login.html",context)
 
-def logout(request):
+def logout_view(request):
         logout(request)
         return render(request, "index.html")
