@@ -2,7 +2,20 @@
 
 {% block body %}
 
-{{file}}
+{% for f in file %}
+  <p>
+    <center>
+      <h3>
+        <strong>
+          {{ f.files }}
+        </strong>
+      </h3>
+    <button type = "submit" class = "btn btn-danger">Düzenle</button>
+    <button type = "submit" class = "btn btn-danger">Sil</button>
+  </center>
+
+  </p>
+{% endfor %}
 
 
 {% endblock body %}

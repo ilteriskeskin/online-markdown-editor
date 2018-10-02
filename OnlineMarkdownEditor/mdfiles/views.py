@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Files
 from .forms import FileForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -21,5 +22,5 @@ def createfiles(request):
     return render(request,"addfiles.html",{"form":form})
 
 def fileview(request):
-    file = Files.files.all()
+    file = Files.objects.all()
     return render(request, "fileview.html", {"file":file})
