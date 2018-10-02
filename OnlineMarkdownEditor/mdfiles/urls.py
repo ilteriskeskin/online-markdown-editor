@@ -6,4 +6,5 @@ app_name ="mdfiles"
 
 urlpatterns =[
     path('createfiles/',views.createfiles,name="createfiles"),
+    path('fileview/', views.fileview, name="fileview"),
 ]
