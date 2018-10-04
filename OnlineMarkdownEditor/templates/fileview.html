@@ -8,13 +8,24 @@
       <h3>
         <strong>
           {{ f.files }}
+        
+    
         </strong>
       </h3>
     <button type = "submit" class = "btn btn-danger">Düzenle</button>
+    <form action="POST">    <button type = "submit" class = "btn btn-success">Convert</button>
+
+    </form>
     <button type = "submit" class = "btn btn-danger">Sil</button>
   </center>
 
   </p>
+{% endfor %}
+
+{% for f in a %}
+
+  {{f.convertfiles}}
+
 {% endfor %}
 
 
