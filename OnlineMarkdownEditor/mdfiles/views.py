@@ -15,10 +15,8 @@ def createfiles(request):
     if form.is_valid():
         files = form.save(commit=False)
 
-        #files.author = request.user
+        files.name = request.user
         files.save()
-
-
         return render(request,"index.html")
 
     return render(request,"addfiles.html",{"form":form})
@@ -26,7 +24,7 @@ def createfiles(request):
 def fileconvert(request):
     a = markdown2.markdown(ConvertFile.convertfiles)
     a.save()
-    return render(request,"fileview.html",{"a":a})
+    return render(request,"fileconvert.html",{"a":a})
 
 
 def fileview(request):
