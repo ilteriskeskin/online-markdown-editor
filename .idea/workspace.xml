@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="259f349c-6e9e-41c4-8a2a-d6e02fa1e99a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/OnlineMarkdownEditor/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/OnlineMarkdownEditor/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/OnlineMarkdownEditor/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/OnlineMarkdownEditor/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/OnlineMarkdownEditor/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/migrations/0002_auto_20181004_1552.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/mdfiles/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/addfiles.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/fileconvertview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/fileview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/includes/navbar.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OnlineMarkdownEditor/user/views.py" beforeDir="false" />
-    </list>
+    <list default="true" id="259f349c-6e9e-41c4-8a2a-d6e02fa1e99a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,14 +38,23 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1881233733">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -122,6 +95,17 @@
             <path>
               <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
               <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
+              <item name="ome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
+              <item name="ome" type="462c0819:PsiDirectoryNode" />
+              <item name="ome" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,15 +149,9 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16397415" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16639742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -181,11 +159,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +182,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>

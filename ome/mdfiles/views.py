@@ -21,5 +21,6 @@ def markdown_convert(request):
             new_ome = form.save(commit=False)
             markdown_text = form.cleaned_data.get('markdown_text')
             new_ome.html_text = markdown2.markdown(markdown_text)
-            new_ome.save()
-        return render(request, 'markdown_convert.html', context={'form': form, 'mdfile': mdfile})
+            #new_ome.save()
+            print(new_ome)
+        return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
