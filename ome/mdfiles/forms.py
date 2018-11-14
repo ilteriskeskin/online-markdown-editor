@@ -5,4 +5,4 @@ from .models import OmeFile
 class OmeForm(forms.ModelForm):
     class Meta:
         model = OmeFile
-        fields = ['markdown_text', 'html_text']
+        fields = ['markdown_text']

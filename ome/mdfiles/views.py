@@ -9,18 +9,17 @@ import markdown2
 
 def markdown_create(request):
     form = OmeForm()
-    return render(request, 'markdown_convert.html', context={'form': form})
+    mdfile = OmeFile.objects.all()
+    return render(request, 'markdown_convert.html', context={'form': form, 'mdfile': mdfile})
 
 
 def markdown_convert(request):
-    mdfile = OmeForm(data=request.POST or None)
+    mdfile = OmeFile.objects.all()
     if request.method == "POST":
         form = OmeForm(data=request.POST)
         if form.is_valid():
             new_ome = form.save(commit=False)
             markdown_text = form.cleaned_data.get('markdown_text')
-            print(markdown2.markdown(markdown_text))
             new_ome.html_text = markdown2.markdown(markdown_text)
             new_ome.save()
-        return render(request, 'markdown_convert.html', context={'form': form})
-    return render(request, 'markdown_convert.html', context={'form': mdfile})
+        return render(request, 'markdown_convert.html', context={'form': form, 'mdfile': mdfile})

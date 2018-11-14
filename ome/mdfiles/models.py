@@ -17,5 +17,5 @@ class OmeFile(models.Model):
     def __str__(self):
         return "{} {}".format(self.markdown_text, self.html_text)
 
-    def convert_markdown_to_html(self):
-        return markdown2.markdown(self.markdown_text)
+
+
