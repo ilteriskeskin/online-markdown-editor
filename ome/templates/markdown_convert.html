@@ -11,15 +11,18 @@
         {{ field.label }}
         {{ field }}
     {% endfor %}
-    <button> Gönder</button>
+    <button>Gönder</button>
 </form>
 
 
-
-
+<form action="{% url 'markdown-save' %}" method="post">
+    {% csrf_token %}
+    <button>Kaydet</button>
 </form>
 
-{{ new_ome.html_text }}
+<hr><br>
+
+{{ new_ome.html_text | safe}}
 
 
 </body>
