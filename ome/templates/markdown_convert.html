@@ -5,25 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-<form action="{% url 'markdown-convert' %}" method="post">
-    {% csrf_token %}
-    {% for field in form %}
+
+<center>
+
+    <form action="{% url 'markdown-convert' %}" method="post">
+        {% csrf_token %}
+        {% for field in form %}
         {{ field.label }}
         {{ field }}
-    {% endfor %}
-    <button>Gönder</button>
-</form>
+        {% endfor %}
+        <br>
+        <button>Gönder</button>
+    </form>
 
+    <form action="{% url 'markdown-save' %}" method="post">
+        {% csrf_token %}
+        <button>Kaydet</button>
+    </form>
 
-<form action="{% url 'markdown-save' %}" method="post">
-    {% csrf_token %}
-    <button>Kaydet</button>
-</form>
+    <hr>
+    <br>
 
-<hr><br>
+    {{ new_ome.html_text | safe}}
 
-{{ new_ome.html_text | safe}}
-
+</center>
 
 </body>
 </html>

@@ -21,9 +21,10 @@ def markdown_convert(request):
             markdown_text = form.cleaned_data.get('markdown_text')
             new_ome.html_text = markdown2.markdown(markdown_text)
         return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
+    return render(request, 'markdown_convert.html')
+
 
 def markdown_save(request):
-    mdfile = OmeForm(data=request.POST or None)
     if request.method == "POST":
         form = OmeForm(data=request.POST)
         if form.is_valid():
@@ -32,4 +33,3 @@ def markdown_save(request):
             new_ome.html_text = markdown2.markdown(markdown_text)
             new_ome.save()
         return render(request, 'markdown_convert.html', context={'form': form})
-    return render(request, 'markdown_convert.html', context={'form': mdfile})
