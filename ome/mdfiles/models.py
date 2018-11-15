@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 
 import markdown2
 
@@ -16,6 +17,9 @@ class OmeFile(models.Model):
 
     def __str__(self):
         return "{} {}".format(self.markdown_text, self.html_text)
+
+    def get_absolute_url(self):
+        return reverse('markdown-create')
 
 
 
