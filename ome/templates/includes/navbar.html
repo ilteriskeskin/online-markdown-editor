@@ -1,0 +1,32 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+        <a class="navbar-brand" href="/">Online Markdown Editör</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/about">Hakkında</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/mdfiles/markdown-create">Editörü Kullan</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ml-auto">
+          {% if request.user.is_authenticated %}
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Kontrol Paneli</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Çıkış Yap</a>
+            </li>
+          {% else %}
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Giriş Yap</a>
+            </li>
+          {% endif %}
+        </div>
+      </div>
+</nav>

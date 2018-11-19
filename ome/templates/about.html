@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<center>
+        <h3 style="margin-top: 3%">Hakkında</h3>
+    </center>
+    <hr>
+        <p>
+                Bu proje açık kaynak ve özgür olarak geliştirilmektedir. Projenin tüm detaylarını
+                <a href="https://www.github.com/ilteriskesk/online-markdown-editor">GitHub sayfasından</a> görüntüleyebilirsiniz.
+                Projenin geliştirilme nedeni Markdown formatında oluşturulacak dosyaların önzilemesi yapılabilmsei ve
+                kayıt altında tutulmasını kolaylaştırmaktır.
+        </p>
+
+        <p>
+            Bu proje GNU General Public License v3.0 Lisansı ile lisanslanmıştır. Lisans ile ilgili detaylı bilgiye
+            <a href="http://ozgurlisanslar.org.tr/gpl/gpl-v3/">bu adresten</a> ulaşabilirsiniz.
+        </p>
+        <br>
+        <hr>
+            <h3>
+                Gizlilik Kurallarımız:
+            </h3>
+            <hr>
+            <div class="row">
+                <div class="col-4">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Saldırı</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Kişisel Bilgiler</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Özgürlük</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                        Siteye yapılacak herhangi bir saldırının sorumlusu değiliz. Saldırının tespiti halinde gerekli
+                        şikayetler ilgili kurumlara yapılacaktır.
+                    </div>
+                    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                        Kişisel parolanız arka planda şifrelenerek veri tabanına kaydolmaktadır. Kimsenin bilgisi izni
+                        dışında alınmayacaktır, izni dışında veya izni dahiline 3. kişilerle paylaşılmayacaktır.
+                    </div>
+                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                        Kimsenin özgürlüğünü kısıtlayıcı bir eylemde bulunulmayacaktır ve aynı hoşgörüyü sizden de görmek isteriz :)
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <hr>
+
+{% endblock body %}
