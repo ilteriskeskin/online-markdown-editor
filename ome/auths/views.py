@@ -39,7 +39,7 @@ def register(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                messages.success(request, 'Tebrikler Kayıt İlemi Başarılı', extra_tags='success')
+                messages.success(request, 'Tebrikler Kayıt İşlemi Başarılı {}'.format(username), extra_tags='success')
                 return HttpResponseRedirect(reverse('markdown-create'))
 
     return render(request, 'auths/register.html', context={'form': form})
