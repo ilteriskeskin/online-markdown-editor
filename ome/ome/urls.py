@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from mdfiles import views
+from .views import index, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
+    path('', index, name='index'),
+    path('about/', about, name='about'),
     path('mdfiles/', include('mdfiles.urls')),
+    path('auths/', include('auths.urls')),
 ]
