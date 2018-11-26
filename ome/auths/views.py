@@ -1,6 +1,6 @@
 from django.shortcuts import render, reverse, HttpResponseRedirect
 from .forms import RegisterForm, LoginForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 
@@ -18,6 +18,14 @@ def user_login(request):
                 return HttpResponseRedirect(reverse('markdown-create'))
 
     return render(request, 'auths/login.html', context={'form': form})
+
+
+def user_logout(request):
+    username = request.user.username
+    logout(request)
+    msg = "Sistemden çıkış yaptınız. Güle güle {}".format(username)
+    messages.success(request, msg, extra_tags='success')
+    return HttpResponseRedirect(reverse('user-login'))
 
 
 def register(request):
