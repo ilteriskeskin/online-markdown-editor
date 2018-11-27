@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="259f349c-6e9e-41c4-8a2a-d6e02fa1e99a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/online-markdown-editor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/online-markdown-editor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ome/mdfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ome/mdfiles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ome/ome/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ome/ome/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ome/templates/markdown_convert.html" beforeDir="false" afterPath="$PROJECT_DIR$/ome/templates/markdown_convert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ome/auths/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ome/auths/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ome/auths/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ome/auths/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ome/auths/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ome/auths/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ome/mdfiles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ome/mdfiles/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ome/templates/includes/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ome/templates/includes/navbar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,29 +21,39 @@
     <session id="1130351521">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
+          <entry key="html" value="12" />
+          <entry key="py" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="12" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="9" />
+          <entry key="html" value="285" />
+          <entry key="py" value="1967" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="285" />
           <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="1967" />
         </counts>
       </usages-collector>
     </session>
@@ -90,24 +104,58 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ome/mdfiles/views.py">
+        <entry file="file://$PROJECT_DIR$/ome/auths/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+            <state relative-caret-position="606">
+              <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
               <folding>
                 <element signature="e#0#85#0" expanded="true" />
+                <marker date="1543321602827" expanded="true" signature="328:1226" ph="..." />
+                <marker date="1543321602827" expanded="true" signature="986:1226" ph="..." />
+                <marker date="1543321602827" expanded="true" signature="1248:1253" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ome/templates/about.html">
+        <entry file="file://$PROJECT_DIR$/ome/templates/includes/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="330">
+              <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ome/templates/auths/user_profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ome/auths/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ome/auths/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="33" column="98" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="98" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+                <marker date="1543272425028" expanded="true" signature="1192:1193" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,6 +166,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -134,14 +183,27 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/ome/mdfiles/urls.py" />
         <option value="$PROJECT_DIR$/ome/templates/index.html" />
         <option value="$PROJECT_DIR$/ome/templates/markdown_convert.html" />
         <option value="$PROJECT_DIR$/ome/templates/base.html" />
-        <option value="$PROJECT_DIR$/ome/ome/urls.py" />
-        <option value="$PROJECT_DIR$/ome/mdfiles/views.py" />
-        <option value="$PROJECT_DIR$/ome/templates/includes/navbar.html" />
         <option value="$PROJECT_DIR$/ome/templates/about.html" />
+        <option value="$PROJECT_DIR$/ome/ome/settings.py" />
+        <option value="$PROJECT_DIR$/ome/mdfiles/urls.py" />
+        <option value="$PROJECT_DIR$/ome/mdfiles/views.py" />
+        <option value="$PROJECT_DIR$/ome/ome/views.py" />
+        <option value="$PROJECT_DIR$/ome/auths/admin.py" />
+        <option value="$PROJECT_DIR$/ome/ome/urls.py" />
+        <option value="$PROJECT_DIR$/ome/templates/auths/register.html" />
+        <option value="$PROJECT_DIR$/ome/templates/auths/login.html" />
+        <option value="$PROJECT_DIR$/ome/auths/forms.py" />
+        <option value="$PROJECT_DIR$/ome/mdfiles/forms.py" />
+        <option value="$PROJECT_DIR$/ome/mdfiles/admin.py" />
+        <option value="$PROJECT_DIR$/ome/mdfiles/models.py" />
+        <option value="$PROJECT_DIR$/ome/auths/models.py" />
+        <option value="$PROJECT_DIR$/ome/auths/urls.py" />
+        <option value="$PROJECT_DIR$/ome/templates/auths/user_profile.html" />
+        <option value="$PROJECT_DIR$/ome/auths/views.py" />
+        <option value="$PROJECT_DIR$/ome/templates/includes/navbar.html" />
       </list>
     </option>
   </component>
@@ -151,7 +213,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="59" />
     <option name="y" value="114" />
     <option name="width" value="1831" />
@@ -165,7 +227,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,13 +243,7 @@
               <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
               <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
               <item name="ome" type="462c0819:PsiDirectoryNode" />
-              <item name="mdfiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
-              <item name="ome" type="462c0819:PsiDirectoryNode" />
-              <item name="ome" type="462c0819:PsiDirectoryNode" />
+              <item name="auths" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
@@ -196,10 +251,25 @@
               <item name="ome" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
+              <item name="ome" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="auths" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="online-markdown-editor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-markdown-editor" type="462c0819:PsiDirectoryNode" />
+              <item name="ome" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,7 +278,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -236,13 +306,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="27" width="1861" height="1053" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18347107" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18820679" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -252,7 +323,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27510917" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.21917808" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32876712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -275,47 +346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ome/mdfiles/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="61" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ome/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ome/templates/includes/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ome/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ome/ome/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="46" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding>
-            <element signature="e#627#659#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ome/templates/markdown_convert.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -323,23 +353,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ome/mdfiles/views.py">
+    <entry file="file://$PROJECT_DIR$/../online-markdown-editor-2/ome/mdfiles/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../online-markdown-editor-2/ome/ome/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/ome/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venvs/omevenv/lib/python3.7/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="365" lean-forward="true" selection-start-line="365" selection-end-line="365" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/ome/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/ome/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ome/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state>
+          <caret selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venvs/omevenv/lib/python3.7/site-packages/django/urls/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../venvs/omevenv/lib/python3.7/site-packages/django/template/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="936" selection-start-line="936" selection-end-line="936" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/templates/auths/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="77" selection-start-line="19" selection-start-column="77" selection-end-line="19" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/mdfiles/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/templates/auths/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#h3#0;n#center#0;n#!!top" expanded="true" />
+            <element signature="e#516#540#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/mdfiles/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/mdfiles/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="33" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/mdfiles/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="27" lean-forward="true" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/mdfiles/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/auths/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="97" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/auths/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/auths/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="31" lean-forward="true" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/auths/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="33" column="98" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="98" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+            <marker date="1543272425028" expanded="true" signature="1192:1193" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/auths/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/templates/auths/user_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/auths/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
+            <marker date="1543321602827" expanded="true" signature="328:1226" ph="..." />
+            <marker date="1543321602827" expanded="true" signature="986:1226" ph="..." />
+            <marker date="1543321602827" expanded="true" signature="1248:1253" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ome/templates/includes/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
         </state>
       </provider>
     </entry>

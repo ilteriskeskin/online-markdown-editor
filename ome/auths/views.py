@@ -1,7 +1,10 @@
-from django.shortcuts import render, reverse, HttpResponseRedirect
+from django.shortcuts import render, reverse, HttpResponseRedirect, get_object_or_404
 from .forms import RegisterForm, LoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+
+from django.contrib.auth.models import User
+from .models import UserProfile
 
 
 def user_login(request):
@@ -36,6 +39,8 @@ def register(request):
         password = form.cleaned_data.get('password')
         user.set_password(password)
         user.save()
+        UserProfile.objects.create(user=user)
+        user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
                 login(request, user)
@@ -43,3 +48,8 @@ def register(request):
                 return HttpResponseRedirect(reverse('markdown-create'))
 
     return render(request, 'auths/register.html', context={'form': form})
+
+
+def user_profile(request, username):
+    user = get_object_or_404(User, username=username)
+    return render(request, 'auths/user_profile.html', context={'user': user})
