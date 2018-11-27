@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
 
 
 # Create your models here.
@@ -18,3 +19,9 @@ class UserProfile(models.Model):
         if user.get_full_name():
             return user.get_full_name()
         return user.username
+
+    def create_profile(sender, created, instance, *args, **kwargs):
+        if created:
+            UserProfile.objects.create(user=instance)
+
+    post_save.connect(create_profile, sender=User)

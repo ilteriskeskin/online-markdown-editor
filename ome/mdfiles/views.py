@@ -34,13 +34,16 @@ def markdown_save(request):
             if 'view' in request.POST:
                 new_ome = form.save(commit=False)
                 markdown_text = form.cleaned_data.get('markdown_text')
+                print(markdown_text)
                 new_ome.html_text = markdown2.markdown(markdown_text)
                 return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
             else:
                 new_ome = form.save(commit=True)
+                print(new_ome)
                 markdown_text = form.cleaned_data.get('markdown_text')
                 new_ome.html_text = markdown2.markdown(markdown_text)
+                new_ome.user = request.user
                 new_ome.save()
                 return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
-
     return render(request, 'markdown_convert.html', context={'form': form})
+

@@ -1,11 +1,21 @@
 {% extends 'base.html' %}
 
 
- {% block title %}
-     {{ user.profile.get_screen_name }}
- {% endblock %}
+{% block title %}
+    {{ user.profile.get_screen_name }}
+{% endblock %}
 
- {% block body %}
+{% block body %}
 
- {{ user.userprofile.get_screen_name }}
- {% endblock %} 
+    <div class="row" style="margin-top: 20px">
+        <div class="col-lg-12">
+            {% for yazi in user.yazi.all %}
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1 class=""><a href="#"> {{ yazi.title }}</a></h1>
+                    </div>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class OmeFile(models.Model):
-    user = models.ForeignKey(User, default=1, null=True, verbose_name='User', on_delete=True, related_name='kullanıcı')
+    user = models.ForeignKey(User, default=1, null=True, verbose_name='User', on_delete=True, related_name='yazi')
     title = models.CharField(max_length=100, blank=False, null=True, verbose_name="Başlık giriniz: ",
                              help_text="Kaydetmek için başlık giriniz:")
     markdown_text = models.TextField(max_length=3000, null=True, blank=True, verbose_name="Markdown yazı")

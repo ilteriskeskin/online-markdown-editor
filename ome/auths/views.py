@@ -4,8 +4,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 from django.contrib.auth.models import User
-from .models import UserProfile
-
 
 def user_login(request):
     form = LoginForm(data=request.POST or None)
@@ -39,7 +37,6 @@ def register(request):
         password = form.cleaned_data.get('password')
         user.set_password(password)
         user.save()
-        UserProfile.objects.create(user=user)
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
@@ -52,4 +49,5 @@ def register(request):
 
 def user_profile(request, username):
     user = get_object_or_404(User, username=username)
+    print(user.yazi.all())
     return render(request, 'auths/user_profile.html', context={'user': user})
