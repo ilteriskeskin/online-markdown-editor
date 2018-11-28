@@ -9,6 +9,7 @@ class OmeFile(models.Model):
                              help_text="Kaydetmek için başlık giriniz:")
     markdown_text = models.TextField(max_length=3000, null=True, blank=True, verbose_name="Markdown yazı")
     html_text = models.TextField(max_length=3000, null=True, blank=True, verbose_name="HTML yazı")
+    created_date = models.DateField(auto_now_add=True, auto_now=False, null=True)
 
     class Meta:
         verbose_name_plural = "Gönderi"
@@ -19,5 +20,3 @@ class OmeFile(models.Model):
 
     def get_absolute_url(self):
         return reverse('markdown-create')
-
-
