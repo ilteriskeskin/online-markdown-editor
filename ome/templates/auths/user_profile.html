@@ -23,15 +23,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                        {% for yazi in user.yazi.all %}
+                    {% for yazi in user.yazi.all %}
                         <tr>
                             <th scope="row">{{ yazi.id }}</th>
                             <td>{{ yazi.title }}</td>
                             <td>{{ yazi.created_date }}</td>
-                            <td><a href="#" class="btn btn-primary">Düzenle</a> <a href="#"
-                                                                                   class="btn btn-danger">Sil</a></td>
+                            <td><a href="{% url 'markdown-view' yazi.slug %}" class="btn btn-primary">Düzenle</a> <a
+                                    href="{% url 'markdown-delete' yazi.slug %}"
+                                    class="btn btn-danger">Sil</a></td>
                         </tr>
-                        {% endfor %}
+                    {% endfor %}
                     </tbody>
                 </div>
             </table>
