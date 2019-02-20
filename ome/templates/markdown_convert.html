@@ -1,29 +1,72 @@
 {% extends "base.html" %}
 
+{% block ust_icerik %}
+    <script type="text/javascript" rel="script">
+        $(document).ready(function () {
+
+
+            $(".content").on('keyup', function (e) {
+                var $this = $(this);
+                var url = $this.attr('url');
+                var data = $this.val();
+                console.log(data);
+                console.log(url);
+                $.ajax({
+                    type: "POST",
+                    url: "url",
+                    data: {'data': data},
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data)
+                    }
+                });
+
+            })
+        });
+
+
+    </script>
+
+
+{% endblock %}
+
 {% block body %}
 
-<center>
+    <center>
 
-    <form action="{% url 'markdown-save' %}" method="POST">
-        {% csrf_token %}
-        {% for field in form %}
-        {{ field.label }}
-        {{ field }}
-        {% endfor %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-9">
 
+                    <form class="form" action="{% url 'markdown-save' %}" method="POST">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {{ field.label }}
+                            {{ field }}
+                        {% endfor %}
+
+                        <br>
+
+                        <input class="goruntule btn btn-success" type="submit" name="view" value="Görüntüle">
+                        {% if request.user.is_authenticated %}
+                            <input class="btn btn-danger" type="submit" name="save" value="Kaydet">
+                        {% endif %}
+                    </form>
+                    {{ new_ome.html_text | safe }}
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <hr>
         <br>
 
-        <input type="submit" name="view" value="Görüntüle">
-        {% if request.user.is_authenticated %}
-            <input type="submit" name="save" value="Kaydet">
-        {% endif %}
-    </form>
 
-    <hr>
-    <br>
-
-    {{ new_ome.html_text | safe}}
-
-</center>
+    </center>
 
 {% endblock body %}

@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, HttpResponseRedirect
 from django.contrib import messages
 from django.http import HttpResponseBadRequest, HttpResponseForbidden
+from django.http import JsonResponse
+from django.template.loader import render_to_string
 
 from .models import OmeFile
 from .forms import OmeForm
@@ -11,7 +13,15 @@ import markdown2
 # Create your views here.
 
 
+
+
 def markdown_create(request):
+
+    if request.is_ajax():
+        data ={'selamet':'selamet'}
+        return JsonResponse(data=data)
+    if request.method =='POST':
+        print(request.POST["dat"])
     form = OmeForm()
     mdfile = OmeFile.objects.all()
     return render(request, 'markdown_convert.html', context={'form': form, 'mdfile': mdfile})
@@ -30,23 +40,29 @@ def markdown_create(request):
 
 
 def markdown_save(request):
-    if request.method == "POST":
-        form = OmeForm(data=request.POST or None)
-        print(form.is_valid())
-        if form.is_valid():
-            if 'view' in request.POST:
-                new_ome = form.save(commit=False)
-                markdown_text = form.cleaned_data.get('markdown_text')
-                new_ome.html_text = markdown2.markdown(markdown_text)
-                return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
-            else:
-                new_ome = form.save(commit=True)
-                markdown_text = form.cleaned_data.get('markdown_text')
-                new_ome.html_text = markdown2.markdown(markdown_text)
-                new_ome.user = request.user
-                new_ome.save()
-                return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
-    return render(request, 'markdown_convert.html', context={'form': form})
+    # if request.method == "POST":
+    #     form = OmeForm(data=request.POST or None)
+    #     print(form.is_valid())
+    #     if form.is_valid():
+    #         if 'view' in request.POST:
+    #             new_ome = form.save(commit=False)
+    #             markdown_text = form.cleaned_data.get('markdown_text')
+    #             new_ome.html_text = markdown2.markdown(markdown_text)
+    #             return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
+    #         else:
+    #             new_ome = form.save(commit=True)
+    #             markdown_text = form.cleaned_data.get('markdown_text')
+    #             new_ome.html_text = markdown2.markdown(markdown_text)
+    #             new_ome.user = request.user
+    #             new_ome.save()
+    #             return render(request, 'markdown_convert.html', context={'form': form, 'new_ome': new_ome})
+    # return render(request, 'markdown_convert.html', context={'form': form})
+
+    form = OmeForm(data=request.POST or None)
+
+
+
+    return JsonResponse(data={})
 
 
 def markdown_view(request, slug):
