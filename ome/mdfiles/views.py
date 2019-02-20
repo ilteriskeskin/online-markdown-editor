@@ -13,15 +13,15 @@ import markdown2
 # Create your views here.
 
 
-
-
 def markdown_create(request):
-
+    data = {'markdown_text': ''}
     if request.is_ajax():
-        data ={'selamet':'selamet'}
-        return JsonResponse(data=data)
-    if request.method =='POST':
-        print(request.POST["dat"])
+        if request.method == 'POST':
+            gelen = request.POST.get('markdown_text')
+            html_text = markdown2.markdown(gelen)
+            data.update({'markdown_text': html_text})
+            return JsonResponse(data=data, safe=False)
+
     form = OmeForm()
     mdfile = OmeFile.objects.all()
     return render(request, 'markdown_convert.html', context={'form': form, 'mdfile': mdfile})
@@ -59,8 +59,6 @@ def markdown_save(request):
     # return render(request, 'markdown_convert.html', context={'form': form})
 
     form = OmeForm(data=request.POST or None)
-
-
 
     return JsonResponse(data={})
 

@@ -7,17 +7,16 @@
 
             $(".content").on('keyup', function (e) {
                 var $this = $(this);
-                var url = $this.attr('url');
                 var data = $this.val();
-                console.log(data);
-                console.log(url);
+                var span = $('.gelen_yazi');
                 $.ajax({
                     type: "POST",
-                    url: "url",
-                    data: {'data': data},
+                    url: '',
+                    data: {'markdown_text': data, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
                     dataType: 'json',
                     success: function (data) {
-                        console.log(data)
+                        console.log("gelen:", data);
+                        span.html(data.markdown_text)
                     }
                 });
 
@@ -61,10 +60,12 @@
             </div>
 
         </div>
-
-
-        <hr>
         <br>
+
+        <div class="col-lg-9">
+            <p class="text-info"> Markdown yazısı: </p>
+            <span class="text-dark gelen_yazi"></span>
+        </div>
 
 
     </center>

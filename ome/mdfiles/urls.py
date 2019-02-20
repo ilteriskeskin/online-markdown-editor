@@ -5,7 +5,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     path("markdown-create/", markdown_create, name="markdown-create"),
-    # path("markdown-convert/", markdown_convert, name="markdown-convert"),
     path("markdown-save/", markdown_save, name="markdown-save"),
     path("markdown-delete/<slug:slug>/", markdown_delete, name="markdown-delete"),
     path("markdown-view/<slug:slug>/", markdown_view, name="markdown-view"),
