@@ -26,14 +26,13 @@ def markdown_create(request):
             gelen = request.POST.get('markdown_text')
             html_text = markdown2.markdown(gelen)
             new_ome = form.save(commit=True)
-            new_ome.markdown_text = ""
             new_ome.html_text = html_text
             new_ome.user = request.user
             new_ome.save()
 
     return render(request, 'markdown_convert.html', context={'form': form, 'mdfile': mdfile})
 
-
+"""
 def markdown_view(request, slug):
     omefile = get_object_or_404(OmeFile, slug=slug)
     form = OmeForm(instance=omefile, data=request.POST or None)
@@ -52,7 +51,7 @@ def markdown_view(request, slug):
             messages.success(request, msg, extra_tags='info')
             return render(request, 'markdown_view.html', context={'slug': slug, 'form': form, 'omefile': omefile})
     return render(request, 'markdown_view.html', context={'slug': slug, 'form': form, 'omefile': omefile})
-
+"""
 
 def markdown_delete(request, slug):
     omefile = get_object_or_404(OmeFile, slug=slug)

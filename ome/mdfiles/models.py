@@ -10,7 +10,6 @@ class OmeFile(models.Model):
     title = models.CharField(max_length=100, blank=False, null=True, verbose_name="Başlık giriniz: ",
                              help_text="Kaydetmek için başlık giriniz:")
     markdown_text = models.TextField(max_length=3000, null=True, blank=True, verbose_name="Markdown yazı")
-    html_text = models.TextField(max_length=3000, null=True, blank=True, verbose_name="HTML yazı")
     created_date = models.DateField(auto_now_add=True, auto_now=False, null=True)
     slug = models.SlugField(null=True, unique=True, editable=False)
 
@@ -19,7 +18,7 @@ class OmeFile(models.Model):
         verbose_name = "Gönderiler"
 
     def __str__(self):
-        return "{} {}".format(self.markdown_text, self.html_text)
+        return "{}".format(self.markdown_text)
 
     def get_absolute_url(self):
         return reverse('markdown-create')
