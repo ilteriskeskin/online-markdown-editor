@@ -22,8 +22,6 @@
 
             })
         });
-
-
     </script>
 
 
@@ -37,7 +35,7 @@
             <div class="col-lg-12">
                 <div class="col-lg-9">
 
-                    <form class="form" action="{% url 'markdown-save' %}" method="POST">
+                    <form class="form" action="{% url 'markdown-create' %}" method="POST">
                         {% csrf_token %}
                         {% for field in form %}
                             {{ field.label }}
@@ -46,9 +44,11 @@
 
                         <br>
 
-                        <input class="goruntule btn btn-success" type="submit" name="view" value="Görüntüle">
+
                         {% if request.user.is_authenticated %}
                             <input class="btn btn-danger" type="submit" name="save" value="Kaydet">
+                        {% else %}
+                            <div><span class="text-danger">Yazılarınız kayıt etmek için üye olunuz.</span></div>
                         {% endif %}
                     </form>
                     {{ new_ome.html_text | safe }}
