@@ -19,14 +19,22 @@ def markdown_create(request, slug=None):
 
     form = OmeForm(data=request.POST or None)
     mdfile = OmeFile.objects.all()
+
     if form.is_valid():
         if 'save' in request.POST:
-            gelen = request.POST.get('markdown_text')
-            html_text = markdown2.markdown(gelen)
-            new_ome = form.save(commit=True)
-            new_ome.html_text = html_text
-            new_ome.user = request.user
-            new_ome.save()
+            baslik = form.cleaned_data.get('title')
+            if OmeFile.objects.filter(title=baslik).exists():
+                omefile = get_object_or_404(OmeFile, title=baslik)
+                form = OmeForm(instance=omefile, data=request.POST or None)
+                if form.is_valid():
+                    form.save()
+            else:
+                gelen = request.POST.get('markdown_text')
+                html_text = markdown2.markdown(gelen)
+                new_ome = form.save(commit=True)
+                new_ome.html_text = html_text
+                new_ome.user = request.user
+                new_ome.save()
 
     if slug:
         omefile = get_object_or_404(OmeFile, slug=slug)
