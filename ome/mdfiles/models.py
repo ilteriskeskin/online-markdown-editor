@@ -18,7 +18,7 @@ class OmeFile(models.Model):
         verbose_name = "Gönderiler"
 
     def __str__(self):
-        return "{}".format(self.markdown_text)
+        return "title: {} text: {}".format(self.title, self.markdown_text)
 
     def get_absolute_url(self):
         return reverse('markdown-create')
