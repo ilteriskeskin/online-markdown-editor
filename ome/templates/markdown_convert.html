@@ -3,8 +3,6 @@
 {% block ust_icerik %}
     <script type="text/javascript" rel="script">
         $(document).ready(function () {
-
-
             $(".content").on('keyup', function (e) {
                 var $this = $(this);
                 var data = $this.val();
@@ -19,7 +17,6 @@
                         span.html(data.markdown_text)
                     }
                 });
-
             })
         });
     </script>
@@ -29,45 +26,31 @@
 
 {% block body %}
 
-    <center>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-9">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="col-lg-9">
-
-                    <form class="form" action="{% url 'markdown-create' %}" method="POST">
-                        {% csrf_token %}
-                        {% for field in form %}
-                            {{ field.label }}
-                            {{ field }}
-                        {% endfor %}
-
-                        <br>
-
-
-                        {% if request.user.is_authenticated %}
-                            <input class="btn btn-danger" type="submit" name="save" value="Kaydet">
-                        {% else %}
-                            <div><span class="text-danger">Yazılarınız kayıt etmek için üye olunuz.</span></div>
-                        {% endif %}
-                    </form>
-                    {{ new_ome.html_text | safe }}
-
-
-                </div>
-
-
+                <form class="form" action="{% url 'markdown-create' %}" method="POST">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {{ field.label }}
+                        {{ field }}
+                    {% endfor %}
+                    <br>
+                    {% if request.user.is_authenticated %}
+                        <input class="btn btn-danger" type="submit" name="save" value="Kaydet">
+                    {% else %}
+                        <div><span class="text-danger">Yazılarınız kayıt etmek için üye olunuz.</span></div>
+                    {% endif %}
+                </form>
+                {{ new_ome.html_text | safe }}
             </div>
-
         </div>
-        <br>
-
-        <div class="col-lg-9">
-            <p class="text-info"> Markdown yazısı: </p>
-            <span class="text-dark gelen_yazi"></span>
-        </div>
-
-
-    </center>
+    </div>
+    <br>
+    <div class="col-lg-9">
+        <p class="text-info"> Markdown yazısı: </p>
+        <span class="text-dark gelen_yazi"></span>
+    </div>
 
 {% endblock body %}
