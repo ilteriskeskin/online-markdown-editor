@@ -4,6 +4,19 @@
 {% block ust_icerik %}
     <script type="text/javascript" rel="script">
         $(document).ready(function () {
+            var $this = $('.content');
+            var data = $this.val();
+            var span = $('.gelen_yazi');
+            $.ajax({
+                    type: "POST",
+                    url: '',
+                    data: {'markdown_text': data, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                    dataType: 'json',
+                    success: function (data) {
+                        span.html(data.markdown_text)
+                    }
+                });
+
             $(".content").on('keyup', function (e) {
                 var $this = $(this);
                 var data = $this.val();
@@ -14,7 +27,6 @@
                     data: {'markdown_text': data, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
                     dataType: 'json',
                     success: function (data) {
-                        console.log("gelen:", data);
                         span.html(data.markdown_text)
                     }
                 });
