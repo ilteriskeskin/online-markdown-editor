@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block ust_icerik %}
     <script type="text/javascript" rel="script">
@@ -28,7 +29,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <div class="col-lg-9">
+            <div style="float:left;" class="col-lg-5">
 
                 <form class="form" action="{% url 'markdown-create' %}" method="POST">
                     {% csrf_token %}
@@ -44,13 +45,19 @@
                     {% endif %}
                 </form>
                 {{ new_ome.html_text | safe }}
+
+            </div>
+        <div class="float-left col-lg-1">
+            <img src="{% static 'img/next.png' %}" width="30px" height="30px" style="margin-top:300px">
+        </div>
+            <div  style="float:right" class="col-lg-6">
+                <p class="text-info "> Markdown yazısı: </p>
+                <span  class="gelen_yazi">
+
+                </span>
             </div>
         </div>
     </div>
-    <br>
-    <div class="col-lg-9">
-        <p class="text-info"> Markdown yazısı: </p>
-        <span class="text-dark gelen_yazi"></span>
-    </div>
+
 
 {% endblock body %}

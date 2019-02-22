@@ -13,4 +13,5 @@ class OmeForm(forms.ModelForm):
             self.fields[field].widget.attrs = {'class': 'form-control'}
 
         self.fields['markdown_text'].widget.attrs = {'class': 'content form-control',
-                                                     'url': '{% url "markdown-create" %}'}
+                                                     'url': '{% url "markdown-create" %}',
+                                                     'style': 'height:500px'}
