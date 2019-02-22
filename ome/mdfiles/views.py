@@ -23,7 +23,7 @@ def markdown_create(request, slug=None):
     if form.is_valid():
         if 'save' in request.POST:
             baslik = form.cleaned_data.get('title')
-            if OmeFile.objects.filter(title=baslik).exists():
+            if OmeFile.objects.filter(title=baslik).exists() and request.user == OmeFile.user:
                 omefile = get_object_or_404(OmeFile, title=baslik)
                 form = OmeForm(instance=omefile, data=request.POST or None)
                 if form.is_valid():
