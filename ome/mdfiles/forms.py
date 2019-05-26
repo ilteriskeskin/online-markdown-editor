@@ -12,6 +12,9 @@ class OmeForm(forms.ModelForm):
         for field in self.fields:
             self.fields[field].widget.attrs = {'class': 'form-control'}
 
-        self.fields['markdown_text'].widget.attrs = {'class': 'content form-control',
+        kwargs.update({"widget": forms.Textarea})
+        self.fields['markdown_text'].widget.attrs = {'id': 'mdyazi',
+                                                     'class': 'content',
                                                      'url': '{% url "markdown-create" %}',
-                                                     'style': 'height:500px'}
+                                                     'placeholder': ">>"
+                                                     }

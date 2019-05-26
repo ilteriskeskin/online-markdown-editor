@@ -1,0 +1,48 @@
+<nav style="padding: 7px;">
+    <div class="container clearfix">
+        <div id="logo-box">
+            <input type="text" name="save" placeholder=" Başlık girin" id="baslik">
+        </div>
+        <div id="nav-links" class="responsive">
+            <ul>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-uppercase nav-icon">
+                        <i class="fas fa-bars fa-editor"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link text-uppercase giris-e">
+                        AnaSayfa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'markdown-create' %}" class="nav-link text-uppercase giris-e">
+                        Profil
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link text-uppercase giris-kaydet" id="kaydet_navbar">
+
+                        Kaydet
+                    </a>
+                </li>
+                <li class="nav-item">
+
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'user-logout' %}" class="nav-link text-uppercase giris-e">
+                            Çıkış
+                        </a>
+
+                    {% else %}
+                        <a href="{% url 'user-login' %}" class="nav-link text-uppercase giris-e"> Giriş Yap</a>
+
+                    {% endif %}
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

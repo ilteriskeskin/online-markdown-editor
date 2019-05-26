@@ -1,4 +1,5 @@
-{% extends "base.html" %}
+{% extends "base_2.html" %}
+
 {% load static %}
 
 {% block ust_icerik %}
@@ -8,14 +9,14 @@
             var data = $this.val();
             var span = $('.gelen_yazi');
             $.ajax({
-                    type: "POST",
-                    url: '',
-                    data: {'markdown_text': data, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
-                    dataType: 'json',
-                    success: function (data) {
-                        span.html(data.markdown_text)
-                    }
-                });
+                type: "POST",
+                url: '',
+                data: {'markdown_text': data, 'csrfmiddlewaretoken': '{{ csrf_token }}'},
+                dataType: 'json',
+                success: function (data) {
+                    span.html(data.markdown_text)
+                }
+            });
 
             $(".content").on('keyup', function (e) {
                 var $this = $(this);
@@ -30,8 +31,38 @@
                         span.html(data.markdown_text)
                     }
                 });
-            })
+            });
+            $("#kaydet_navbar").click(function (e) {
+                e.preventDefault();
+                var $this2 = $('.content');
+                var data = $this2.val();
+
+                var $this = $('#baslik');
+                var $title = $this.val();
+                var $status = 'save';
+                console.log($title);
+                console.log(data);
+                $.ajax({
+                    type: "POST",
+                    url: '',
+                    data: {
+                        'markdown_text': data,
+                        'title': $title,
+                        'status': $status,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    dataType: 'json',
+                    success: (function (data) {
+                        console.log("başaılı")
+                    })
+
+                });
+
+
+            });
         });
+
+
     </script>
 
 
@@ -39,36 +70,27 @@
 
 {% block body %}
 
-    <div class="row">
-        <div class="col-lg-12">
-            <div style="float:left;" class="col-lg-5">
 
-                <form class="form" action="{% url 'markdown-create' %}" method="POST">
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {{ field.label }}
-                        {{ field }}
-                    {% endfor %}
-                    <br>
-                    {% if request.user.is_authenticated %}
-                        <input class="btn btn-danger" type="submit" name="save" value="Kaydet">
-                    {% else %}
-                        <div><span class="text-danger">Yazılarınız kayıt etmek için üye olunuz.</span></div>
-                    {% endif %}
-                </form>
-                {{ new_ome.html_text | safe }}
+    <div id="md1">
+        <form action="{% url 'markdown-create' %}" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
 
-            </div>
-        <div class="float-left col-lg-1">
-            <img src="{% static 'img/next.png' %}" width="30px" height="30px" style="margin-top:300px">
-        </div>
-            <div  style="float:right" class="col-lg-6">
-                <p class="text-info "> Markdown yazısı: </p>
-                <span  class="gelen_yazi">
+                {% if field.name == 'markdown_text' %}
+                    {{ field }}
+                {% endif %}
+            {% endfor %}
 
-                </span>
-            </div>
-        </div>
+        </form>
+
+    </div>
+    </div>
+
+    <div id="md2">
+
+        <span class="gelen_yazi" id="mdkarsiligi"></span>
+
+
     </div>
 
 

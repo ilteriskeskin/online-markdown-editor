@@ -1,10 +1,33 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% include "includes/navbar.html" %}
+
 
 {% block body %}
 
-<div class="jumbotron text-center">
-    <h3>Online Markdown Editöre Hoş Geldin {{ request.user.username }}</h3>
-    <p>Kendi dosyalarını kaydetmek için kullanıcı oluşturup giriş yapmalısın.</p>
-</div>
+    <header class="header">
 
+        <div class="logo-box1">
+            <img src="{% static 'img/dev-black.png' %}" alt="">
+        </div>
+
+        <h1 class="heading">
+            <span class="heading-main">Markdown Editor</span>
+            <br>
+            <span class="heading-sub">Kendi dosyalarını kaydetmek için kullanıcı oluşturup giriş yapmalısın</span>
+            <button class="btn btn-danger btn-lg btn-block" type="button"><a href="{% url 'markdown-create' %}">Editörü
+                Kullan</a></button>
+
+        </h1>
+
+    </header>
+
+
+    <script>
+        $('.nav-icon').click(function () {
+            $('#nav-links').toggleClass("responsive");
+            return false;
+        });
+    </script>
 {% endblock body %}
